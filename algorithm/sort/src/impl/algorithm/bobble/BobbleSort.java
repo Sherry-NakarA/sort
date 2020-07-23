@@ -1,4 +1,4 @@
-package impl.selection;
+package impl.algorithm.bobble;
 
 import base.algorithm.BaseArraySort;
 import util.Utils;
@@ -11,37 +11,34 @@ import util.Utils;
  *                                                                                                                    *
  *                                         Programmer : NakarA                                                        *
  *                                                                                                                    *
- *                                         Start Date : 20/07/22 14:24                                                *
+ *                                         Start Date : 20/07/22 18:10                                                *
  *                                                                                                                    *
  *                                        Last Update : July 22 2020 [NakarA]                                         *
  *                                                                                                                    *
  *--------------------------------------------------------------------------------------------------------------------*
  *                                                                                                                    *
  * Class Description                                                                                                  *
- *      The implementation of the selecting sorting algorithm                                                         *
+ *      The implementation of the bubbling sorting algorithm                                                          *
  *                                                                                                                    *
  *====================================================================================================================*/
-public class SelectionSort implements BaseArraySort {
+public class BobbleSort implements BaseArraySort {
 
     @Override
-    public void sort(int[] sourceArray) {
+    public void sort(int[] sourceArray) throws ArrayIndexOutOfBoundsException {
 
-        // 每次记录首个剩余元素和下标, 向后遍历找到更小的元素及下标并与记录元素和下标交换, 直到找完将两个元素交换, 将最小元素交换到首位
         int len = sourceArray.length;
-        int index, target;
 
-        for (int i = 0; i < len; i++) {
+        for (int i = 1; i < len; i++) {                             // 遍历轮数为原数组长度减一
 
-            index = i;
-            target = sourceArray[i];                                    // 选择每次遍历的起始元素并记录
+            boolean flag = true;                                    // 已排序标签, 优化排序时间
 
-            for (int j = i; j < len; j++) {
-                if (target > sourceArray[j]) {                          // 找到比target更小的目的
-                    target = sourceArray[j];                            // 交换
-                    index = j;
+            for (int j = 0; j < len - i; j++) {                     // 后轮数次的位置已经完成排序, 因此每次只遍历到轮数前
+                if (sourceArray[j] > sourceArray[j + 1]) {          // 判断前一项是否大于后一项
+                    Utils.swap(sourceArray, j, j + 1);              // 交换前后项
+                    flag = false;                                   // 未完成排序标记
                 }
-            }                                                           // 找到最小元素
-            Utils.swap(sourceArray, i, index);                          // 将最小元素与起始元素交换位置
+            }
+            if (flag) break;                                        // 如果本次遍历过程中无任何交换, 则退出并返回结果
         }
     }
 }

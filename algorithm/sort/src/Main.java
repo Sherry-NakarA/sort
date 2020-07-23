@@ -1,5 +1,5 @@
 import base.algorithm.BaseArraySort;
-import impl.selection.SelectionSort;
+import impl.algorithm.selection.SelectionSort;
 import impl.strategy.ImplSortStrategy;
 
 import java.util.Arrays;
@@ -24,7 +24,7 @@ public class Main {
         ImplSortStrategy strategy = new ImplSortStrategy(selectionSort);
 
 /**********************************************************************************************************************
- *                                          result format                                                             *
+ *                                           print result format                                                      *
  *--------------------------------------------------------------------------------------------------------------------*
  *  use function -- strategy.runSort()                                                                                *
  *====================================================================================================================*/

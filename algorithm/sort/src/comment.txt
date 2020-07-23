@@ -1,3 +1,4 @@
+Class Comment
 /**********************************************************************************************************************
  *                                                                                                                    *
  *                                       Project Name : algorithm sort                                                *
@@ -16,3 +17,14 @@
  *      The implementation of the bubbling sorting algorithm                                                          *
  *                                                                                                                    *
  *====================================================================================================================*/
+
+ Function Comment
+     /**
+      * swap sourceArray's item, one index is leftIndex another is rightIndex
+      * @param sourceArray source array
+      * @param leftIndex the one index
+      * @param rightIndex the other index
+      * @throws ArrayIndexOutOfBoundsException when index more than source array's max size will throw exception
+      * @author NakarA
+      * @since 20/07/22 09:24
+      */

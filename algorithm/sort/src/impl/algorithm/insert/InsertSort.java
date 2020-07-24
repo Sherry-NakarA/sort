@@ -40,13 +40,13 @@ public class InsertSort implements BaseArraySort {
 
             for (int j = i - 1; j >= 0; j--) {          // 从后向前, 比较 target 与数组当前位置的元素
                 if (target >= sourceArray[j]) {
-                    swapIndex = j + 1;                  // 找到比 target 小的元素, 记录当前下标
+                    swapIndex = j + 1;                  // 找到比 target 小的数组元素, 准备将 target 插入至该元素后
                     break;
                 }
             }
 
             while (p > swapIndex) {
-                sourceArray[p] = sourceArray[p - 1];    // 后移所有比 target 大的数组元素, 再将 target 插入到恰当的位置
+                sourceArray[p] = sourceArray[p - 1];    // 后移所有比 target 大的元素, 再将 target 插入到下标为 swapIndex 处
                 p--;
             }
             sourceArray[swapIndex] = target;            // 将 target 插入到目标位置

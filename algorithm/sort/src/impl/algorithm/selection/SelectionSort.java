@@ -7,7 +7,7 @@ import util.Utils;
  *                                                                                                                    *
  *                                       Project Name : algorithm sort                                                *
  *                                                                                                                    *
- *                                          File Name : BaseArraySort                                                 *
+ *                                          File Name : SelectionSort                                                 *
  *                                                                                                                    *
  *                                         Programmer : NakarA                                                        *
  *                                                                                                                    *

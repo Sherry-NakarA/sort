@@ -1,5 +1,5 @@
-import base.algorithm.BaseArraySort;
-import impl.algorithm.selection.SelectionSort;
+import base.strategy.BaseSortStrategy;
+import impl.algorithm.insert.InsertSort;
 import impl.strategy.ImplSortStrategy;
 
 import java.util.Arrays;
@@ -16,12 +16,10 @@ public class Main {
 /**********************************************************************************************************************
  *                                           declaration format                                                       *
  *--------------------------------------------------------------------------------------------------------------------*
- *  BaseArraySort bobbleSort = new BobbleSort(); // new base sort algorithm's implementation algorithm                *
- *  ImplSortStrategy strategy = new ImplSortStrategy(bobbleSort); // new strategy to run sort strategy                *
+ *  BaseSortStrategy strategy = new ImplSortStrategy(new InsertSort());                                               *
  *====================================================================================================================*/
 
-        BaseArraySort selectionSort = new SelectionSort();
-        ImplSortStrategy strategy = new ImplSortStrategy(selectionSort);
+        BaseSortStrategy strategy = new ImplSortStrategy(new InsertSort()); // 传入排序实现类来执行其排序方法
 
 /**********************************************************************************************************************
  *                                           print result format                                                      *
@@ -29,8 +27,10 @@ public class Main {
  *  use function -- strategy.runSort()                                                                                *
  *====================================================================================================================*/
 
-        strategy.runSort(sourceArray);                                  // reverse sort
-        System.out.println(Arrays.toString(sourceArray));               // show sorted array
+        strategy.runSort(sourceArray);                                      // sort
+        System.out.println(Arrays.toString(sourceArray));                   // show sorted array
+        strategy.runSort(sourceArray, true);                        // reverse sort
+        System.out.println(Arrays.toString(sourceArray));                  // show sorted array
 
     }
 }

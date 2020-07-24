@@ -14,7 +14,11 @@ public class ImplSortStrategy implements BaseSortStrategy {
 
     @Override
     public void runSort(int[] sourceArray) {
-        baseArraySort.sort(sourceArray);
+        try{
+            baseArraySort.sort(sourceArray);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array outbound exceptions This problem may come from the sorting algorithm used.");
+        }
     }
 
     @Override

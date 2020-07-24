@@ -4,7 +4,7 @@ package base.algorithm;
  *                                                                                                                    *
  *                                       Project Name : algorithm sort                                                *
  *                                                                                                                    *
- *                                          File Name : BaseSortStrategy                                              *
+ *                                          File Name : BaseArraySort                                              *
  *                                                                                                                    *
  *                                         Programmer : NakarA                                                        *
  *                                                                                                                    *
@@ -15,7 +15,7 @@ package base.algorithm;
  *--------------------------------------------------------------------------------------------------------------------*
  *                                                                                                                    *
  * Class Description :                                                                                                *
- *      sort method strategy interface, all sort strategy must implement this interface and achieve runSort()         *
+ *      sort method interface, all sort algorithm must implement this interface and achieve sort()                    *
  *                                                                                                                    *
  *====================================================================================================================*/
 public interface BaseArraySort {

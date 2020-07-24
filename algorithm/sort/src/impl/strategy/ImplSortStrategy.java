@@ -4,6 +4,24 @@ import base.algorithm.BaseArraySort;
 import base.strategy.BaseSortStrategy;
 import util.Utils;
 
+/**********************************************************************************************************************
+ *                                                                                                                    *
+ *                                       Project Name : algorithm sort                                                *
+ *                                                                                                                    *
+ *                                          File Name : BaseSortStrategy                                              *
+ *                                                                                                                    *
+ *                                         Programmer : NakarA                                                        *
+ *                                                                                                                    *
+ *                                         Start Date : 20/07/22 13:20                                                *
+ *                                                                                                                    *
+ *                                        Last Update : July 22 2020 [NakarA]                                         *
+ *                                                                                                                    *
+ *--------------------------------------------------------------------------------------------------------------------*
+ *                                                                                                                    *
+ * Class Description                                                                                                  *
+ *      The implementation of the BaseSortStrategy interface                                                          *
+ *                                                                                                                    *
+ *====================================================================================================================*/
 public class ImplSortStrategy implements BaseSortStrategy {
 
     public BaseArraySort baseArraySort;

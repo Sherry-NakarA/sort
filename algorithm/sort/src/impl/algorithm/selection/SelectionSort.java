@@ -18,7 +18,7 @@ import util.Utils;
  *--------------------------------------------------------------------------------------------------------------------*
  *                                                                                                                    *
  * Class Description                                                                                                  *
- *      The implementation of the selecting sorting algorithm                                                         *
+ *      The implementation of the selection sorting algorithm                                                         *
  *                                                                                                                    *
  *====================================================================================================================*/
 public class SelectionSort implements BaseArraySort {

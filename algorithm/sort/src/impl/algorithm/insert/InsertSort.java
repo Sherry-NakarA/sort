@@ -17,7 +17,7 @@ import base.algorithm.BaseArraySort;
  *--------------------------------------------------------------------------------------------------------------------*
  *                                                                                                                    *
  * Class Description                                                                                                  *
- *      The algorithm's implementation about insert sort                                                              *
+ *      The implementation of insert sorting algorithm                                                                *
  *                                                                                                                    *
  *====================================================================================================================*/
 public class InsertSort implements BaseArraySort {

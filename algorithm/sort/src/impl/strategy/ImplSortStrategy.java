@@ -32,10 +32,10 @@ public class ImplSortStrategy implements BaseSortStrategy {
 
     @Override
     public void runSort(int[] sourceArray) {
-        try{
+        try {
             baseArraySort.sort(sourceArray);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Array outbound exceptions This problem may come from the sorting algorithm used.");
+            System.out.println("Array out bound exceptions This problem maybe come from the sorting algorithm used.");
         }
     }
 
